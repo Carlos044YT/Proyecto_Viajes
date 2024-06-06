@@ -1,0 +1,290 @@
+/* Barra de navegación */
+:root {
+    --color_primario: #215DC0;
+    --color_primario_suave: #888F9B;
+    --color_blanco: #fff;
+    --altura_header: 60px;
+    --padding_left_right: 12px;
+    --ancho_maximo: 1200px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #efefef;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+#Main {
+    display: flexbox;
+    align-content: start;
+}
+
+.header {
+    height: var(--altura_header);
+    background-color: var(--color_primario);
+    position: fixed;
+    width: 100%;
+}
+
+.navbar {
+    height: 100%;
+    display: flex;
+    width: min(1200px, 100%);
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 0 var(--padding_left_right);
+
+}
+
+.logo {
+    color: var(--color_blanco);
+}
+
+.bi-list {
+    color: var(--color_blanco);
+    cursor: pointer;
+
+}
+
+.ul_links {
+    width: 100%;
+    background-color: var(--color_primario);
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    top: var(--altura_header);
+    left: 0;
+    /*height: calc(100vh - var(--altura_header));*/
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    transition: all.3s;
+    opacity: 75%;
+    list-style: none;
+}
+
+.a {
+    font-size: 3.4rem;
+    color: var(--color_blanco);
+    font-weight: bold;
+}
+
+.menu_hamburguesa {
+    display: none;
+}
+
+.menu_hamburguesa:checked+.ul_links {
+    height: calc(100vh - var(--altura_header));
+}
+
+
+.foto1 {
+    text-align: center;
+}
+
+@media (min-width:510px) {
+    .menu_hamburguesa1 {
+        display: none;
+    }
+
+    .ul_links {
+        position: static;
+        width: auto;
+        height: auto;
+        flex-direction: row;
+        gap: 1 rem;
+    }
+
+    .a {
+        font-size: 1.2rem;
+        transition: all .3s;
+
+    }
+
+    .a:hover {
+        background-color: #6897E5;
+        padding: .2rem .7rem;
+    }
+
+    .foto {
+        height: 300px;
+        width: 470px;
+    }
+}
+
+.item {
+    scroll-margin-top: 8ex;
+}
+
+/* Botones */
+.main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 0.5em;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.up {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    gap: 0.5em;
+
+}
+
+.down {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    gap: 0.5em;
+
+}
+
+.card1 {
+    width: 90px;
+    height: 90px;
+    outline: none;
+    border: none;
+    background: white;
+    border-radius: 90px 5px 5px 5px;
+    -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    -webkit-transition: .2s ease-in-out;
+    transition: .2s ease-in-out;
+}
+
+.instagram {
+    margin-top: 1.5em;
+    margin-left: 1.2em;
+    fill: #cc39a4;
+}
+
+.card2 {
+    width: 90px;
+    height: 90px;
+    outline: none;
+    border: none;
+    background: white;
+    border-radius: 5px 90px 5px 5px;
+    -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    -webkit-transition: .2s ease-in-out;
+    transition: .2s ease-in-out;
+}
+
+.facebook {
+    margin-top: 1.5em;
+    margin-left: -.9em;
+    fill: #03A9F4;
+}
+
+.card3 {
+    width: 90px;
+    height: 90px;
+    outline: none;
+    border: none;
+    background: white;
+    border-radius: 5px 5px 5px 90px;
+    -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    -webkit-transition: .2s ease-in-out;
+    transition: .2s ease-in-out;
+}
+
+.whatsapp {
+    margin-top: -.6em;
+    margin-left: 1.2em;
+    fill: #00ff00;
+}
+
+.card4 {
+    width: 90px;
+    height: 90px;
+    outline: none;
+    border: none;
+    background: white;
+    border-radius: 5px 5px 90px 5px;
+    -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    -webkit-transition: .2s ease-in-out;
+    transition: .2s ease-in-out;
+}
+
+.gmail {
+    margin-top: -.9em;
+    margin-left: -1.2em;
+    fill: #f14336;
+}
+
+.card1:hover {
+    cursor: pointer;
+    background-color: #cc39a4;
+}
+
+.card1:hover .instagram {
+    fill: white;
+}
+
+.card2:hover {
+    cursor: pointer;
+    background-color: #1877f2;
+}
+
+.card2:hover .facebook {
+    fill: white;
+}
+
+.card3:hover {
+    cursor: pointer;
+    background-color: #00ff00;
+}
+
+.card3:hover .whatsapp {
+    fill: white;
+}
+
+.card4:hover {
+    cursor: pointer;
+    background-color: #FF0004;
+}
+
+.card4:hover .gmail {
+    fill: white;
+}
+
+/* diseño para lo demas de la pagina */
+.ul_1{
+list-style: inside;
+}
