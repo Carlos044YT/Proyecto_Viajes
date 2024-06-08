@@ -35,6 +35,8 @@ body {
     height: var(--altura_header);
     background-color: var(--color_primario);
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
 }
 
@@ -63,7 +65,7 @@ body {
 
 .ul_links {
     width: 100%;
-    background-color: var(--color_primario);
+    background-color: var(--color_primario_suave);
     height: 0;
     overflow: hidden;
     position: absolute;
@@ -76,7 +78,6 @@ body {
     align-items: center;
     gap: 3rem;
     transition: all.3s;
-    opacity: 75%;
     list-style: none;
 }
 
@@ -143,7 +144,7 @@ body {
     -ms-flex-direction: column;
     flex-direction: column;
     gap: 0.5em;
-    position: absolute;
+    position: fixed;
     right: 0;
     bottom: 0;
 }
@@ -284,7 +285,101 @@ body {
     fill: white;
 }
 
+@media (max-width:510px) {
+    .card1 {
+        height: 40px;
+        width: 40px;
+    }
+
+    .instagram {
+        margin-top: .4em;
+        margin-left: .6em;
+        height: 22px;
+    }
+
+    .card2 {
+        height: 40px;
+        width: 40px;
+    }
+
+    .facebook {
+        margin-top: .3em;
+        margin-left: -.7em;
+        height: 19px;
+    }
+
+    .card3 {
+        height: 40px;
+        width: 40px;
+    }
+
+    .whatsapp {
+        margin-top: -.4em;
+        margin-left: .7em;
+        height: 20px;
+    }
+
+    .card4 {
+        height: 40px;
+        width: 40px;
+    }
+
+    .gmail {
+        margin-top: -.3em;
+        margin-left: -.3em;
+        height: 18px;
+    }
+}
+
 /* diseño para lo demas de la pagina */
-.ul_1{
-list-style: inside;
+.contenido {
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.ul_1 {
+    list-style: inside;
+}
+
+.logol {
+    width: 15%;
+    border-radius: 90%;
+}
+
+.cliente {
+    width: 15%;
+    height: 45%;
+    border-radius: 90%;
+}
+
+@media (max-width:510px) {
+    .logol {
+        width: 40%;
+        border-radius: 90%;
+    }
+
+    .cliente {
+        width: 45%;
+        height: 45%;
+        border-radius: 90%;
+    }
+}
+
+@media (min-width:510px) {
+    h1 {
+        font-size: 60px;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    h3 {
+        font-size: 30px;
+    }
+
+    p,
+    ul {
+        font-size: 25px;
+    }
 }
