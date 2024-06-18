@@ -21,7 +21,7 @@ a {
 body {
     margin: 0;
     padding: 0;
-    background-color: #efefef;
+    background:url(Fotos/carro_eva.jpg);
     font-family: 'Courier New', Courier, monospace;
 }
 
@@ -329,6 +329,176 @@ body {
         margin-left: -.3em;
         height: 18px;
     }
+}
+
+/*diseño del login*/
+.fondo{
+    position: fixed;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,.5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0,0,0,0.5) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: transform .5s ease height .2s ease;
+    transform: scale(0);
+}
+/* para abrir login */
+.fondo.active-btn{
+    transform: scale(1);
+}
+
+.fondo.active{
+    height: 455px;
+}
+
+.fondo .contenedor_form{
+    width: 100%;
+    padding: 40px;
+}
+
+.fondo .contenedor_form.login{
+    transition: .17s ease;
+    transform: translateX(0);
+}
+
+.fondo.active .contenedor_form.login{
+    transition: none;
+    transform: translateX(-400px);
+}
+
+.fondo .contenedor_form.registrar{
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+}
+
+.fondo.active .contenedor_form.registrar{
+    transition: transform .17s ease;
+    transform: translateX(0);
+}
+
+.fondo .icono-cerrar{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background-color: #090f1d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+    font-size: 1.8em;
+    color: #F1EFEF;
+} 
+
+.contenedor_form h2{
+    font-size: 2em;
+    color: #F1EFEF;
+    text-align: center;
+}
+
+.contenedor_input{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #F1EFEF;
+    margin: 30px 0;
+}
+
+.contenedor_input label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    font-weight: 600;
+    pointer-events: none;
+    transition: .4s;
+    color: #F1EFEF;
+}
+
+.contenedor_input input:focus~label,
+.contenedor_input input:valid~label{
+    top: -5px;
+}
+
+.contenedor_input input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #F1EFEF;
+    padding: 0 35px 0 5px;
+}
+
+.contenedor_input .icono{
+    position: absolute;
+    right: 8px;
+    font-size: 1.4em;
+    color: #F1EFEF;
+    line-height: 57px;
+}
+
+.recordar{
+    font-size: .9em;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+}
+
+.recordar label input{
+    accent-color: #090f1d;
+    margin-right: 3px;
+}
+
+.recordar a{
+    color: #F1EFEF;
+    text-decoration: none;
+}
+
+.recordar a:hover{
+    text-decoration: underline;
+}
+
+.btn{
+    width: 100%;
+    height: 45px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: #090f1d;
+    color: #F1EFEF;
+}
+
+.registrar{
+    color: #F1EFEF;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+
+.registrar p, a{
+    font-size: 1.1em;
+    color: #F1EFEF;
+    text-decoration: none;
+}
+
+.registrar p a:hover{
+    text-decoration: underline;
 }
 
 /* diseño para lo demas de la pagina */
