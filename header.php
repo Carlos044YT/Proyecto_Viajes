@@ -1,29 +1,21 @@
-//Muertito Sección
-    <div id="Main">
-    <header class="header">
-        <nav class="navbar">
-            <h1><img src="Fotos/ayala_logo.jpg" alt="Error 404...." height="50px" width="55"></h1>
-            <label class="menu_hamburguesa1" for="menu_hamburguesa">
-                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
-                    class="bi bi-list" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
-                </svg><!--svg es el icono de lista-->
-            </label>
-            <input class="menu_hamburguesa" type="checkbox" name="" id="menu_hamburguesa">
-            <ul class="ul_links">
-                <li class="li_links"><!--Opciones tema 1-->
-                    <a href="index.php" class="a">Inicio</a>
-                </li>
-                <li class="li_links"><!--Opciones tema 2-->
-                    <a href="#" class="a">Rutas</a>
-                </li>
-                <li class="li_links"><!--Opciones tema 3-->
-                    <a href="#" class="a">Ofertas</a>
-                </li>
-                <li class="li_links"><!--Opcion Login-->
-                    <button class="btn">Iniciar sesion</button>
-                </li>
+<!-- Muertito seccion -->
+<header>
+        <div class="navbar">
+            <div class="logo"><a href="#">Ayalas Transportes</a></div>
+            <ul class="links">
+                <li><a href="index.php">Inicio</a></li>
+                <li><a href="rutas.php">Rutas</a></li>
+                <li><a href="ofertas.php">Ofertas</a></li>
             </ul>
-        </nav>
+            <button class="btn">Iniciar sesion</button>
+            <div class="toggle_btn">
+                <i class="bi bi-list"></i>
+            </div>
+        </div>
+        <div class="dropdown_menu">
+            <li><a href="#navbar" class="resaltar">Inicio</a></li>
+            <li><a href="Datos.html">Rutas</a></li>
+            <li><a href="Estadisticas.html">Ofertas</a></li>
+            <li><button class="btn">Iniciar sesion</button>
+        </div>
     </header>

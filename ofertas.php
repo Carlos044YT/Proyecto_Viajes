@@ -99,42 +99,7 @@ include_once 'header.php';
         <!-- Fin del login -->
         <!-- Contenido de la pagina -->
         <div class="contenido">
-            <h1>¡Bienvenidos a AT!</h1>
-            <h3>Especializados en el transporte de personal privado</h3><br><br>
-            <img src="Fotos/ayala_logo.jpg" alt="Error 404..." id="logo largo" class="logol">
-            <br><br>
-            <h2>Más sobre nosotros</h2>
-            <p>Ofrecemos transporte de personal privado como rutas de fin de semana en diferentes tipos de
-                vehiculos, siempre buscando
-                su comodidad y brindarle los mejores precios.<br><br>
-                Nuestra cobertura abarca todo Quéretaro por lo que solamente es necesario pregunar por nuestra
-                disponibilidad en las unidades
-            </p><br><br><br>
-            <h2>Atención al cliente</h2>
-            <img src="Fotos/cliente.jpg" alt="Error 404..." class="cliente">
-            <h2>Horario de lunes a sabado de 8:00am a 10:00pm</h2>
-            <h3>Número de atención al cliente (442 204 5904)</h3><br><br><br><br><br><br><br>
-            <h2>Unidades</h2><br><br>
-            <h2>Toyota HIACE</h2>
-            <ul class="ul_1">
-                <li>15 pasajeros</li>
-                <li>Asientos reclinables</li>
-                <li>Cinturones de seguridad</li>
-                <li>Aire acondicionado</li>
-            </ul>
-            <img src="" alt="Error 404..."><br>
-            <img src="" alt="Error 404..."><br><br><br><br>
-            <hr>
-            <h2>Sprinter</h2>
-            <ul class="ul_1">
-                <li>20 pasajeros</li>
-                <li>Asientos reclinables</li>
-                <li>Cinturones de seguridad</li>
-                <li>Aire acondicionado</li>
-            </ul>
-            <img src="" alt="Error 404..."><br>
-            <img src="" alt="Error 404..."><br><br><br><br>
-            <hr>
+            <h1>¡Proximamente!</h1>
             <!-- Fin del contenido -->
     </center>
     <!-- Mad Sección -->

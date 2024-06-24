@@ -1,3 +1,3 @@
 <?php
-include "conexión.php"
+include "conexion.php";
 ?>

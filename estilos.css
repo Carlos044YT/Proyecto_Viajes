@@ -1,13 +1,3 @@
-/* Barra de navegación */
-:root {
-    --color_primario: #215DC0;
-    --color_primario_suave: #888F9B;
-    --color_blanco: #fff;
-    --altura_header: 60px;
-    --padding_left_right: 12px;
-    --ancho_maximo: 1200px;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -19,119 +9,266 @@ a {
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    background:url(Fotos/carro_eva.jpg);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background:url(Fotos/fondo_morado.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     font-family: 'Courier New', Courier, monospace;
 }
 
 
-#Main {
-    display: flexbox;
-    align-content: start;
-}
-
-.header {
-    height: var(--altura_header);
-    background-color: var(--color_primario);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
-
-.navbar {
-    height: 100%;
-    display: flex;
-    width: min(1200px, 100%);
-    margin: 0 auto;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    position: relative;
-    padding: 0 var(--padding_left_right);
-
-}
-
-.logo {
-    color: var(--color_blanco);
-}
-
-.bi-list {
-    color: var(--color_blanco);
-    cursor: pointer;
-
-}
-
-.ul_links {
-    width: 100%;
-    background-color: var(--color_primario_suave);
-    height: 0;
-    overflow: hidden;
-    position: absolute;
-    top: var(--altura_header);
-    left: 0;
-    /*height: calc(100vh - var(--altura_header));*/
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    gap: 3rem;
-    transition: all.3s;
+/* Diseño del header */
+li {
     list-style: none;
 }
 
-.a {
-    font-size: 3.4rem;
-    color: var(--color_blanco);
+a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.3rem;
+}
+
+a:hover {
+    color: rgba(255, 166, 0, 0.717);
+}
+
+.resaltar {
+    color: rgba(255, 166, 0, 0.717);
     font-weight: bold;
 }
 
-.menu_hamburguesa {
+header {
+    position: relative;
+    padding: 0 2rem;
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.3);
+    padding: 10px 20px;
+    -webkit-backdrop-filter: blur(20px); /* Para Safari */
+    backdrop-filter: blur(20px);
+}
+
+.navbar .logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .links {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .toggle_btn {
+    color: #ffffff;
+    font-size: 1.5rem;
+    cursor: pointer;
     display: none;
 }
 
-.menu_hamburguesa:checked+.ul_links {
-    height: calc(100vh - var(--altura_header));
+.btn {
+    background-color: orange;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
 }
 
-
-.foto1 {
-    text-align: center;
+.btn:hover {
+    scale: 1.05;
+    color: #fff;
 }
 
-@media (min-width:510px) {
-    .menu_hamburguesa1 {
+.btn:active {
+    scale: 0.95;
+}
+
+/* Dropdown menu */
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: transparent;
+    -webkit-backdrop-filter: blur(20px); /* Para Safari */
+    backdrop-filter: blur(20px);
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Diseño por si no soporta el backdrop-filter y lo cambie por una semitransparente */
+.no-dropdown_menu .dropdown_menu {
+    background: rgba(13, 32, 51); /* Fallback para navegadores sin soporte */
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+}
+/* Finalización */
+
+.dropdown_menu.open {
+    height: 260px;
+}
+
+.dropdown_menu li {
+    padding: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu .action_btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Diseño para hacer responsive el header */
+@media (max-width: 992px) {
+
+    .navbar .links,
+    .navbar .btn {
         display: none;
     }
 
-    .ul_links {
-        position: static;
-        width: auto;
-        height: auto;
-        flex-direction: row;
-        gap: 1 rem;
+    .navbar .toggle_btn {
+        display: block;
     }
 
-    .a {
-        font-size: 1.2rem;
-        transition: all .3s;
-
-    }
-
-    .a:hover {
-        background-color: #6897E5;
-        padding: .2rem .7rem;
-    }
-
-    .foto {
-        height: 300px;
-        width: 470px;
+    .dropdown_menu {
+        display: block;
     }
 }
 
-.item {
-    scroll-margin-top: 8ex;
+@media (max-width: 430px) {
+
+    .navbar .links,
+    .navbar .btn {
+        display: none;
+    }
+
+    .navbar .toggle_btn {
+        display: block;
+    }
+
+    .dropdown_menu {
+        display: block;
+        width: 90%;
+        position: absolute;
+        left: 5.5%;
+        top: 60px;
+    }
+
+    .navbar .btn {
+        width: 90%;
+    }
+
+    .btn:hover {
+        scale: 0.90;
+        color: #fff;
+    }
+
+    .btn:active {
+        scale: 1.0;
+    }
+}
+
+/* Diseño del pie de pagina */
+footer {
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+}
+
+.pie-pagina {
+    width: 100%;
+    background-color: #194b74;
+}
+
+.pie-pagina .grupo-1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+}
+
+.pie-pagina .grupo-1 .box figure {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pie-pagina .grupo-1 .box figure img {
+    width: 250px;
+}
+
+.pie-pagina .grupo-1 .box h2 {
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.pie-pagina .grupo-1 .box p {
+    color: #efefef;
+    margin-bottom: 10px;
+}
+
+.pie-pagina .grupo-1 .red-social a {
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    line-height: 45px;
+    margin-right: 10px;
+    background-color: #0d2033;
+    text-align: center;
+    border-radius: 30px;
+    transition: all 300ms ease;
+}
+
+.pie-pagina .grupo-1 .red-social a:hover {
+    color: aqua;
+}
+
+.pie-pagina .grupo-2 {
+    background-color: #0a1a2a;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+
+.pie-pagina .grupo-2 small {
+    font-size: 15px;
+}
+
+@media screen and (max-width: 800px) {
+    .pie-pagina .grupo-1 {
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
 }
 
 /* Botones */
@@ -472,7 +609,7 @@ body {
     text-decoration: underline;
 }
 
-.btn{
+.btn1{
     width: 100%;
     height: 45px;
     border: none;
