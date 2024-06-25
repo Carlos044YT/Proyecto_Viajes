@@ -1,0 +1,698 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: url(Fotos/fondo_morado.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+/* Diseño del header */
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.3rem;
+}
+
+a:hover {
+    color: rgba(255, 166, 0, 0.717);
+}
+
+.resaltar {
+    color: rgba(255, 166, 0, 0.717);
+    font-weight: bold;
+}
+
+header {
+    position: relative;
+    padding: 0 2rem;
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.3);
+    padding: 10px 20px;
+    -webkit-backdrop-filter: blur(20px);
+    /* Para Safari */
+    backdrop-filter: blur(20px);
+}
+
+.navbar .logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .links {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .toggle_btn {
+    color: #ffffff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.btn {
+    background-color: orange;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+
+.btn:hover {
+    scale: 1.05;
+    color: #fff;
+}
+
+.btn:active {
+    scale: 0.95;
+}
+
+/* Dropdown menu */
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: transparent;
+    -webkit-backdrop-filter: blur(20px);
+    /* Para Safari */
+    backdrop-filter: blur(20px);
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Diseño por si no soporta el backdrop-filter y lo cambie por una semitransparente */
+.no-dropdown_menu .dropdown_menu {
+    background: rgba(13, 32, 51);
+    /* Fallback para navegadores sin soporte */
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+}
+
+/* Finalización */
+
+.dropdown_menu.open {
+    height: 260px;
+}
+
+.dropdown_menu li {
+    padding: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu .action_btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Diseño para hacer responsive el header */
+@media (max-width: 992px) {
+
+    .navbar .links,
+    .navbar .btn {
+        display: none;
+    }
+
+    .navbar .toggle_btn {
+        display: block;
+    }
+
+    .dropdown_menu {
+        display: block;
+    }
+}
+
+@media (max-width: 430px) {
+
+    .navbar .links,
+    .navbar .btn {
+        display: none;
+    }
+
+    .navbar .toggle_btn {
+        display: block;
+    }
+
+    .dropdown_menu {
+        display: block;
+        width: 90%;
+        position: absolute;
+        left: 5.5%;
+        top: 60px;
+    }
+
+    .navbar .btn {
+        width: 90%;
+    }
+
+    .btn:hover {
+        scale: 0.90;
+        color: #fff;
+    }
+
+    .btn:active {
+        scale: 1.0;
+    }
+}
+
+/* Diseño del pie de pagina */
+footer {
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+}
+
+.pie-pagina {
+    width: 100%;
+    background-color: #194b74;
+}
+
+.pie-pagina .grupo-1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+}
+
+.pie-pagina .grupo-1 .box figure {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pie-pagina .grupo-1 .box figure img {
+    width: 250px;
+}
+
+.pie-pagina .grupo-1 .box h2 {
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.pie-pagina .grupo-1 .box p {
+    color: #efefef;
+    margin-bottom: 10px;
+}
+
+.pie-pagina .grupo-1 .red-social a {
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    line-height: 45px;
+    margin-right: 10px;
+    background-color: #0d2033;
+    text-align: center;
+    border-radius: 30px;
+    transition: all 300ms ease;
+}
+
+.pie-pagina .grupo-1 .red-social a:hover {
+    color: aqua;
+}
+
+.pie-pagina .grupo-2 {
+    background-color: #0a1a2a;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+
+.pie-pagina .grupo-2 small {
+    font-size: 15px;
+}
+
+@media screen and (max-width: 800px) {
+    .pie-pagina .grupo-1 {
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
+}
+
+/* Botones */
+.main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 0.5em;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+
+.up {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    gap: 0.5em;
+
+}
+
+.down {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    gap: 0.5em;
+
+}
+
+.card1 {
+    width: 90px;
+    height: 90px;
+    outline: none;
+    border: none;
+    background: white;
+    border-radius: 90px 5px 5px 5px;
+    -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    -webkit-transition: .2s ease-in-out;
+    transition: .2s ease-in-out;
+}
+
+.instagram {
+    margin-top: 1.5em;
+    margin-left: 1.2em;
+    fill: #cc39a4;
+}
+
+.card2 {
+    width: 90px;
+    height: 90px;
+    outline: none;
+    border: none;
+    background: white;
+    border-radius: 5px 90px 5px 5px;
+    -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    -webkit-transition: .2s ease-in-out;
+    transition: .2s ease-in-out;
+}
+
+.facebook {
+    margin-top: 1.5em;
+    margin-left: -.9em;
+    fill: #03A9F4;
+}
+
+.card3 {
+    width: 90px;
+    height: 90px;
+    outline: none;
+    border: none;
+    background: white;
+    border-radius: 5px 5px 5px 90px;
+    -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    -webkit-transition: .2s ease-in-out;
+    transition: .2s ease-in-out;
+}
+
+.whatsapp {
+    margin-top: -.6em;
+    margin-left: 1.2em;
+    fill: #00ff00;
+}
+
+.card4 {
+    width: 90px;
+    height: 90px;
+    outline: none;
+    border: none;
+    background: white;
+    border-radius: 5px 5px 90px 5px;
+    -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    -webkit-transition: .2s ease-in-out;
+    transition: .2s ease-in-out;
+}
+
+.gmail {
+    margin-top: -.9em;
+    margin-left: -1.2em;
+    fill: #f14336;
+}
+
+.card1:hover {
+    cursor: pointer;
+    background-color: #cc39a4;
+}
+
+.card1:hover .instagram {
+    fill: white;
+}
+
+.card2:hover {
+    cursor: pointer;
+    background-color: #1877f2;
+}
+
+.card2:hover .facebook {
+    fill: white;
+}
+
+.card3:hover {
+    cursor: pointer;
+    background-color: #00ff00;
+}
+
+.card3:hover .whatsapp {
+    fill: white;
+}
+
+.card4:hover {
+    cursor: pointer;
+    background-color: #FF0004;
+}
+
+.card4:hover .gmail {
+    fill: white;
+}
+
+@media (max-width:510px) {
+    .card1 {
+        height: 40px;
+        width: 40px;
+    }
+
+    .instagram {
+        margin-top: .4em;
+        margin-left: .6em;
+        height: 22px;
+    }
+
+    .card2 {
+        height: 40px;
+        width: 40px;
+    }
+
+    .facebook {
+        margin-top: .3em;
+        margin-left: -.7em;
+        height: 19px;
+    }
+
+    .card3 {
+        height: 40px;
+        width: 40px;
+    }
+
+    .whatsapp {
+        margin-top: -.4em;
+        margin-left: .7em;
+        height: 20px;
+    }
+
+    .card4 {
+        height: 40px;
+        width: 40px;
+    }
+
+    .gmail {
+        margin-top: -.3em;
+        margin-left: -.3em;
+        height: 18px;
+    }
+}
+
+/*diseño del login*/
+.fondo {
+    position: fixed;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: transform .5s ease height .2s ease;
+    transform: scale(0);
+}
+
+/* para abrir login */
+.fondo.active-btn {
+    transform: scale(1);
+}
+
+.fondo.active {
+    height: 455px;
+}
+
+.fondo .contenedor_form {
+    width: 100%;
+    padding: 40px;
+}
+
+.fondo .contenedor_form.login {
+    transition: .17s ease;
+    transform: translateX(0);
+}
+
+.fondo.active .contenedor_form.login {
+    transition: none;
+    transform: translateX(-400px);
+}
+
+.fondo .contenedor_form.registrar {
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+}
+
+.fondo.active .contenedor_form.registrar {
+    transition: transform .17s ease;
+    transform: translateX(0);
+}
+
+.fondo .icono-cerrar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background-color: #090f1d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+    font-size: 1.8em;
+    color: #F1EFEF;
+}
+
+.contenedor_form h2 {
+    font-size: 2em;
+    color: #F1EFEF;
+    text-align: center;
+}
+
+.contenedor_input {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #F1EFEF;
+    margin: 30px 0;
+}
+
+.contenedor_input label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    font-weight: 600;
+    pointer-events: none;
+    transition: .4s;
+    color: #F1EFEF;
+}
+
+.contenedor_input input:focus~label,
+.contenedor_input input:valid~label {
+    top: -5px;
+}
+
+.contenedor_input input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #F1EFEF;
+    padding: 0 35px 0 5px;
+}
+
+.contenedor_input .icono {
+    position: absolute;
+    right: 8px;
+    font-size: 1.4em;
+    color: #F1EFEF;
+    line-height: 57px;
+}
+
+.recordar {
+    font-size: .9em;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+}
+
+.recordar label input {
+    accent-color: #090f1d;
+    margin-right: 3px;
+}
+
+.recordar a {
+    color: #F1EFEF;
+    text-decoration: none;
+}
+
+.recordar a:hover {
+    text-decoration: underline;
+}
+
+.btn1 {
+    width: 100%;
+    height: 45px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: #090f1d;
+    color: #F1EFEF;
+}
+
+.registrar {
+    color: #F1EFEF;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+
+.registrar p,
+a {
+    font-size: 1.1em;
+    color: #F1EFEF;
+    text-decoration: none;
+}
+
+.registrar p a:hover {
+    text-decoration: underline;
+}
+
+/* diseño para lo demas de la pagina */
+.contenido {
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.ul_1 {
+    list-style: inside;
+}
+
+.logol {
+    width: 15%;
+    border-radius: 90%;
+}
+
+.cliente {
+    width: 15%;
+    height: 45%;
+    border-radius: 90%;
+}
+
+@media (max-width:510px) {
+    .logol {
+        width: 40%;
+        border-radius: 90%;
+    }
+
+    .cliente {
+        width: 45%;
+        height: 45%;
+        border-radius: 90%;
+    }
+}
+
+@media (min-width:510px) {
+    h1 {
+        font-size: 60px;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    h3 {
+        font-size: 30px;
+    }
+
+    p,
+    ul {
+        font-size: 25px;
+    }
+}

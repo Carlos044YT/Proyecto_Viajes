@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Dokdo&family=Great+Vibes&family=Jacquard+12+Charted&family=Libre+Barcode+39+Extended+Text&family=Permanent+Marker&family=Playwrite+US+Trad:wght@100..400&family=Press+Start+2P&family=Protest+Revolution&family=Rubik+Glitch+Pop&family=Rubik+Moonrocks&family=Sixtyfour&display=swap');
+h1,h2,h3{
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+th,
+tbody{
+    font-family: 'Times New Roman';
+    color: blanchedalmond;
+}
+
+#formulario{
+    width: 40%;
+    background: rgba(255, 255, 255, 0.2); /* Color de fondo del div */
+    backdrop-filter: blur(10px); /* Aplicar el efecto de difuminado */
+    -webkit-backdrop-filter: blur(10px); /* Compatibilidad con Safari */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Borde opcional */
+    padding: 20px;
+    margin: 50px auto;
+    text-align: center;
+    color: white;
+}
+
+form{
+    box-shadow: 1.3em;
+    margin: 0;
+    padding: 0.1%;
+    width: 100%;
+    border: 1px solid white;
+}
+
+label{
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font: 400;
+    padding: 2%;
+    text-align: left;
+}
+
+input{
+    width: 50%;
+    padding: 0.4%;
+}
+
+#Nombre{
+    padding-right: 8%;
+}
+
+#Correo{
+    padding-right: 10%;
+}
+
+#Contraseña{
+    padding-right: 4%;
+}
+
+#Registrar{
+    width: 30%;
+    padding: 1%;
+    background: rgba(255, 255, 255, 0.2); /* Color de fondo del div */
+    backdrop-filter: blur(10px); /* Aplicar el efecto de difuminado */
+    -webkit-backdrop-filter: blur(10px); /* Compatibilidad con Safari */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Borde opcional */
+    margin: 50px auto;
+    text-align: center;
+    color: white;
+}
