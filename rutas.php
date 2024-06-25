@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <?php
 include_once 'header.php';
 include 'conexion.php'; // Archivo que contiene la conexión a la base de datos
@@ -30,7 +31,6 @@ if ($result) {
 mysqli_close($conexion);
 ?>
 
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -120,5 +120,4 @@ mysqli_close($conexion);
     include_once 'pie_de_pagina.php';
     ?>
 </body>
-
 </html>

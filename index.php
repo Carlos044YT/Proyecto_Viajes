@@ -113,5 +113,4 @@ include_once 'conexion.php';
     include_once 'pie_de_pagina.php';
     ?>
 </body>
-
 </html>

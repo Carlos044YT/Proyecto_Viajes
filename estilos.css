@@ -490,6 +490,7 @@ footer {
     transform: scale(0);
 }
 
+
 /* para abrir login */
 .fondo.active-btn {
     transform: scale(1);
@@ -504,6 +505,7 @@ footer {
     padding: 40px;
 }
 
+
 .fondo .contenedor_form.login {
     transition: .17s ease;
     transform: translateX(0);
@@ -514,16 +516,19 @@ footer {
     transform: translateX(-400px);
 }
 
+
 .fondo .contenedor_form.registrar {
     position: absolute;
     transition: none;
     transform: translateX(400px);
 }
 
+
 .fondo.active .contenedor_form.registrar {
     transition: transform .17s ease;
     transform: translateX(0);
 }
+
 
 .fondo .icono-cerrar {
     position: absolute;
@@ -548,6 +553,7 @@ footer {
     text-align: center;
 }
 
+
 .contenedor_input {
     position: relative;
     width: 100%;
@@ -555,6 +561,7 @@ footer {
     border-bottom: 2px solid #F1EFEF;
     margin: 30px 0;
 }
+
 
 .contenedor_input label {
     position: absolute;
@@ -592,6 +599,7 @@ footer {
     line-height: 57px;
 }
 
+
 .recordar {
     font-size: .9em;
     margin: -15px 0 15px;
@@ -600,15 +608,18 @@ footer {
     font-weight: 600;
 }
 
+
 .recordar label input {
     accent-color: #090f1d;
     margin-right: 3px;
 }
 
+
 .recordar a {
     color: #F1EFEF;
     text-decoration: none;
 }
+
 
 .recordar a:hover {
     text-decoration: underline;
@@ -627,11 +638,13 @@ footer {
     color: #F1EFEF;
 }
 
+
 .registrar {
     color: #F1EFEF;
     text-align: center;
     margin: 25px 0 10px;
 }
+
 
 .registrar p,
 a {
@@ -639,6 +652,7 @@ a {
     color: #F1EFEF;
     text-decoration: none;
 }
+
 
 .registrar p a:hover {
     text-decoration: underline;

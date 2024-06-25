@@ -6,6 +6,7 @@
                 <li><a href="index.php">Inicio</a></li>
                 <li><a href="rutas.php">Rutas</a></li>
                 <li><a href="ofertas.php">Ofertas</a></li>
+
                 <li><a href="registrar.php">Registrate!</a></li>
             </ul>
             <button class="btn">Iniciar sesion</button>
